@@ -1,7 +1,10 @@
 var input=document.getElementById("input"),
     addBut=document.getElementById("butAdd");
 var mainList=document.getElementById("list");
-var arrDelte=[],arrInput=[],arrSave=[],arrEdit=[];
+var arrDelte=[],
+    arrInput=[],
+    arrSave=[],
+    arrEdit=[];
 addBut.onclick=function()
 {
     
@@ -47,7 +50,7 @@ addBut.onclick=function()
 
         }
     }
-   /* for(var i=0;i<arrInput.length;i++)
+   for(var i=0;i<arrInput.length;i++)
     {  
         
             arrInput[i].ondblclick=function()
@@ -75,7 +78,7 @@ addBut.onclick=function()
             }
         
         
-    }*/
+    }
 
 
     for(var i=0;i<arrEdit.length;i++)
@@ -100,8 +103,10 @@ addBut.onclick=function()
                                 this.parentElement.children[2].classList.toggle('hide');
                                 this.parentElement.children[3].classList.toggle('hide');
                             }
+
                     }
                 }
+
                 
             }
         
