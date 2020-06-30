@@ -50,6 +50,7 @@ addBut.onclick=function()
 
         }
     }
+    
    for(var i=0;i<arrInput.length;i++)
     {  
         
