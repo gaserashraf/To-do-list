@@ -186,7 +186,7 @@ and (max-width : 1099px)
     {
         background-color: #bbf1c8;
         padding: 20px 0;
-        min-height: 1100px;
+        min-height: 1000px;
         
     }
     .list .item
@@ -197,7 +197,7 @@ and (max-width : 1099px)
 
     .list .item input
     {
-        width: 483px;
+        width: 600px;
         padding: 2vw;
         font-size: 4vw;
         height: 6vw;
