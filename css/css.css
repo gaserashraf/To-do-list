@@ -186,7 +186,7 @@ and (max-width : 1099px)
     {
         background-color: #bbf1c8;
         padding: 20px 0;
-        min-height: 1000px;
+        min-height: 1050px;
         
     }
     .list .item
@@ -206,14 +206,14 @@ and (max-width : 1099px)
     {
         color: black;
         position: absolute;
-        left: 694px;
+        left: 752px;
         top: 25px;
         cursor: pointer;
         font-size: 5vw;
     }
     .list .item .edit
     {
-        left: 630px;
+        left: 689px;
         top: 28px;
     }
     .list .item .del:hover

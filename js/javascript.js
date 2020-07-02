@@ -5,9 +5,8 @@ var arrDelte=[],
     arrInput=[],
     arrSave=[],
     arrEdit=[];
-addBut.onclick=function()
+function addNewItem()
 {
-    
     if(input.value!="")
     {
         
@@ -38,8 +37,7 @@ addBut.onclick=function()
         arrSave= Array.from(document.querySelectorAll(".list .item .ok"));
         arrInput= Array.from(document.querySelectorAll(".list .item"));
         arrEdit= Array.from(document.querySelectorAll(".list .item .edit"));
-        console.log(arrSave);
-        console.log(arrSave.length);
+        input.value="";
     }
     
     for(var i=0;i<arrDelte.length;i++)
@@ -113,9 +111,12 @@ addBut.onclick=function()
         
         
     }
-    
-    
 }
+addBut.onclick=addNewItem;
 
-
-
+input.addEventListener("keyup", function(event) {
+    event.preventDefault();
+    if (event.keyCode === 13) {
+        addBut.click();
+    }
+})
