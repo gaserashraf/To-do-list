@@ -73,7 +73,7 @@ body
     {
         background-color: #bbf1c8;
         padding: 20px 0;
-        min-height: 500px;
+        min-height: 440px;
         
     }
     .list .item
@@ -83,17 +83,30 @@ body
     }
     .list .item input
     {
-        width: 400px;
-        padding: 0 5px;
+        width: 500px;
+        padding: 5px 15px;
         font-size: 20px;
         height: 42.5px;
+        border: none;
+        box-shadow: 6px 6px 8px rgb(112, 231, 159);
+        border-radius: 20px 0 20px 0;
+        border: 1px solid #80bdab;
+        color: black;
+        transition: all .5s ease-in-out;
+        outline: none;
+    }
+    .list .item input:hover
+    {
+        transform: scale(1.1,1.1);
+        
     }
     .list .item i
     {
+        font-size: 20px;
         color: black;
         position: absolute;
-        left: 945px;
-        top:13px;
+        left: 995px;
+        top: 15px;
         cursor: pointer;
     }
     .list .item .del:hover
@@ -102,12 +115,12 @@ body
     }
     .list .item .edit
     {
-        left: 920px;
-        top:15px;
+        left: 963px;
+        top: 18px;
     }
     .list .item .ok:hover,.list .item .edit:hover
     {
-        color: green;
+        color: rgb(0, 71, 0);
     }
     .list .item .hide
     {
@@ -201,6 +214,13 @@ and (max-width : 1099px)
         padding: 2vw;
         font-size: 4vw;
         height: 6vw;
+       
+        box-shadow: 6px 6px 8px rgb(112, 231, 159);
+        border-radius: 50px 0 50px 0;
+        border: 1px solid #80bdab;
+        color: black;
+        
+        outline: none;
     }
     .list .item i
     {
