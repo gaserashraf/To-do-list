@@ -59,13 +59,13 @@ function load()
             input.value="";
             
         }
-        editAndDel();
+        //editAndDel();
         
     }
     
 }
 window.onload=load;
-function editAndDel()
+/*function editAndDel()
 {
     for(var i=0;i<arrDelte.length;i++)
     {  
@@ -143,7 +143,46 @@ function editAndDel()
         
     }
     
-}
+}*/
+
+document.addEventListener("click", function(e) {
+    if(e.target.classList.contains("del"))
+    {
+        e.target.parentElement.remove();
+        save();
+    }
+    else if(e.target.classList.contains("edit"))
+    {
+        if(e.target.parentElement.children[0].hasAttribute("disabled"))
+        {
+            e.target.parentElement.children[0].removeAttribute("disabled");
+            e.target.parentElement.children[1].classList.toggle('hide');
+            e.target.parentElement.children[2].classList.toggle('hide');
+            e.target.parentElement.children[3].classList.toggle('hide');
+        }
+    }
+    else if(e.target.classList.contains("ok"))
+    {
+        e.target.parentElement.firstElementChild.setAttribute("disabled","on")
+        e.target.parentElement.children[1].classList.toggle('hide');
+        e.target.parentElement.children[2].classList.toggle('hide');
+        e.target.parentElement.children[3].classList.toggle('hide');
+        save();
+    }
+    
+});
+document.addEventListener("dblclick", function(e) {
+
+ 
+    if(e.target.hasAttribute("disabled"))
+    {
+        console.log("gaser");
+        e.target.parentElement.children[0].removeAttribute("disabled");
+            e.target.parentElement.children[1].classList.toggle('hide');
+            e.target.parentElement.children[2].classList.toggle('hide');
+            e.target.parentElement.children[3].classList.toggle('hide');
+    }
+});
 function addNewItem()
 {
     if(input.value!="")
@@ -180,14 +219,22 @@ function addNewItem()
         arrVal= Array.from(document.querySelectorAll(".list .item input"));
         save();
     }
-    editAndDel();
+    //editAndDel();
     
 }
 addBut.onclick=addNewItem;
 
-input.addEventListener("keyup", function(event) {
+document.addEventListener("keyup", function(event) {
     event.preventDefault();
-    if (event.keyCode === 13) {
+    if (event.keyCode === 13&&event.target.id=="input") {
         addBut.click();
+    }
+    else if(event.keyCode === 13&&!event.target.hasAttribute("disabled"))
+    {
+        event.target.parentElement.firstElementChild.setAttribute("disabled","on")
+        event.target.parentElement.children[1].classList.toggle('hide');
+        event.target.parentElement.children[2].classList.toggle('hide');
+        event.target.parentElement.children[3].classList.toggle('hide');
+        save();
     }
 })
